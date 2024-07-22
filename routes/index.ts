@@ -16,7 +16,7 @@ function randomArticle(seed: number): string {
 }
 
 function randomNoun(seed: number): string {
-  
+
   let nouns: string[] = ['waste','increase','sky','horn','sweater','head','push','bell',
   'passenger','sock','mouth','ant','zoo','holiday','branch','snake','robin',
   'knife','part','throne','distribution','women','care','loaf','angle','sleep',
@@ -116,7 +116,7 @@ function randomNoun(seed: number): string {
 }
 
 function randomVerb(seed: number): string {
-  
+
   let verbs: string[] = ['prays','sprouts','opens','plants','shades','signals','shivers',
   'hooks','lies','borrows','punctures','wishes','arrives','watches','hands',
   'greets','informs','harasses','crushes','wants','cries','winks','cheats',
@@ -346,7 +346,7 @@ function randomAjective(seed: number): string {
 }
 
 function randomAdverb(seed: number): string {
-  
+
   let adverbs: string[] = ['dimly','acidly','potentially','judgementally','fervently',
   'lively','deeply','beautifully','devotedly','yesterday','tenderly',
   'tensely','boastfully','carefully','upward','queasily','basically',
@@ -513,7 +513,7 @@ function randomTitle(seed: number): string {
 }
 
 function randomParagraph(seed: number): string {
-  
+
   sentences = 4 + Math.floor(generator.random() * 5);
   let paragraph: string[] = [];
   for (let i = 0; i < sentences; i++) {
@@ -523,7 +523,7 @@ function randomParagraph(seed: number): string {
 }
 
 function randomParagraphs(seed: number): string[] {
-  
+
   let paragraphs = 5 + Math.floor(generator.random() * 100);
   let article: string[] = [];
   for (let i = 0; i < paragraphs; i++) {
@@ -558,6 +558,7 @@ function generateSeed(path: string): number {
 }
 
 function randomPage(req: Request, res: Response) {
+  console.log('in the index router function here');
   let seed = generateSeed(req.hostname + req.path);
   let title = randomTitle(seed);
   let paragraphs = randomParagraphs(seed);
