@@ -3032,6 +3032,8 @@ function generateSeed(path: string): number {
 
 async function randomPage(req: Request, res: Response) {
   console.log('in the index router function here');
+  console.log(`MY_ENV_TO_PRINT: ${process.env.MY_ENV_TO_PRINT}`);
+  console.log(`MY_ENCRYPTED_ENV_TO_PRINT: ${process.env.MY_ENCRYPTED_ENV_TO_PRINT}`);
   const browser = await puppeteer.launch({ args: ['--no-sandbox'], headless: true });
   const page = await browser.newPage();
   await page.setContent('Hello World');
