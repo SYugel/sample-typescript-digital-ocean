@@ -15,6 +15,7 @@ ENV PUPPETEER_EXECUTABLE_PATH /usr/bin/chromium-browser
 WORKDIR /app
 COPY --from=builder /app/dist /app/dist
 
+COPY views .
 COPY package.json .
 COPY yarn.lock .
 RUN yarn install --frozen-lockfile
