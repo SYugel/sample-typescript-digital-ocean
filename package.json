@@ -20,6 +20,7 @@
     "mersenne-twister": "^1.1.0",
     "morgan": "~1.9.1",
     "pug": "^2.0.4",
+    "puppeteer": "^22.13.1",
     "uglify-js": "^2.6.0"
   },
   "devDependencies": {
